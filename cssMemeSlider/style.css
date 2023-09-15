@@ -1,0 +1,119 @@
+/* :root Castom Variables */
+:root {
+    font-family: 'Inter', sans-serif;
+    --background-color: rgb(247, 233, 216);
+    --slider-color: #262626;
+    --slider-text: #FFF;
+    --pagination-button-color: #FFA42E;
+    --pagination-button-hover-color: #BBBBBB;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Reset Default Style  */
+/* Body Reset Default And Style */
+html,
+body {
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    background-color: var(--background-color);
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--slider-color);
+}
+
+.slider-container > input {
+    display: none;
+}
+
+.slider-container > .slider-pagination {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.slider__screen {
+    display: flex;
+    flex-direction: row;
+    max-width: 590px;
+    max-height: 590px;
+    border-radius: 5%;
+    overflow: hidden;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.slider__item {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    flex: 0 0 auto;
+}
+
+.slider__img {
+    max-width: 100%;
+    height: auto;
+}
+
+.slider-pagination {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.slider-pagination label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--pagination-button-color);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slider-pagination:hover {
+    color: var(--pagination-button-hover-color);
+}
+
+.slider__text {
+    display: none;
+    color: var(--slider-text);
+    text-align: left;
+    margin-top: 10px;
+}
+
+#slide1:checked~.slider__screen .slide1,
+#slide2:checked~.slider__screen .slide2,
+#slide3:checked~.slider__screen .slide3,
+#slide4:checked~.slider__screen .slide4,
+#slide5:checked~.slider__screen .slide5 {
+    transform: translateX(0);
+}
+
+/* Стили для активной точки пагинации */
+#slide1:checked~.slider-pagination label[for="slide1"],
+#slide2:checked~.slider-pagination label[for="slide2"],
+#slide3:checked~.slider-pagination label[for="slide3"],
+#slide4:checked~.slider-pagination label[for="slide4"],
+#slide5:checked~.slider-pagination label[for="slide5"] {
+    background-color: transparent;
+    border: 3px solid var(--pagination-button-color);
+}
+
+/* Стили для активной подписи */
+#slide1:checked~.slider__screen .slider__text:nth-child(1),
+#slide2:checked~.slider__screen .slider__text:nth-child(2),
+#slide3:checked~.slider__screen .slider__text:nth-child(3),
+#slide3:checked~.slider__screen .slider__text:nth-child(4),
+#slide3:checked~.slider__screen .slider__text:nth-child(5) {
+    display: inline;
+}
