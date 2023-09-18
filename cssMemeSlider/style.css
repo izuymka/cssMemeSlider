@@ -50,7 +50,7 @@ body {
     display: flex;
     flex-direction: column;
     height: inherit;
-    width: inherit;
+    width: 100%;
     object-fit: contain;
     flex: 0 0 auto;
     transform: translateX(100%);
@@ -207,7 +207,7 @@ body {
 }
 
 #slide3:checked~.slider__screen>.slide3 {
-    transform: translateX(-240%);
+    transform: translateX(-200%);
     z-index: 1;
 }
 
@@ -217,21 +217,8 @@ body {
 }
 
 #slide5:checked~.slider__screen>.slide5 {
-    transform: translateX(-460%);
+    transform: translateX(-400%);
     z-index: 1;
-}
-
-/* Mobile Version Slider Image */
-@media screen and (max-width: 800px) {
-    #slide3:checked~.slider__screen>.slide3 {
-        transform: translateX(-200%);
-        z-index: 1;
-    }
-
-    #slide5:checked~.slider__screen>.slide5 {
-        transform: translateX(-400%);
-        z-index: 1;
-    }
 }
 
 /* Стили для активной точки пагинации */
