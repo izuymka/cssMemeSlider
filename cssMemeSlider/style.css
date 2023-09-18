@@ -40,8 +40,8 @@ body {
 .slider__screen {
     display: flex;
     flex-direction: row;
-    max-width: 590px;
-    max-height: 590px;
+    max-width: 36.875rem;
+    max-height: 36.875rem;
     border-radius: 5%;
     overflow: hidden;
     object-fit: cover;
@@ -79,7 +79,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     max-width: 100%
 }
 
@@ -90,12 +90,19 @@ body {
 
 .slider-pagination label {
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
     background-color: var(--pagination-button-color);
     border-radius: 50%;
-    margin: 0 5px;
+    margin: 0 0.313rem;
     cursor: pointer;
+}
+
+.slider__clickarea {
+    display: block;
+    padding: 0.3rem;
+    cursor: pointer;
+    pointer-events: auto;
 }
 
 .slider-pagination label:hover {
@@ -107,7 +114,7 @@ body {
     display: flex;
     flex-direction: row;
     flex: 0 0 auto;
-    max-width: 130px;
+    max-width: 8.125rem;
     color: var(--slider-text);
     text-align: left;
     overflow: hidden;
@@ -119,6 +126,23 @@ body {
 
 span {
     flex: 0 0 auto;
+}
+
+/* Mobile Version */
+@media screen and (max-width: 800px) {
+    .slider__img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+    }
+
+    .slider__bottom {
+        flex-direction: column-reverse;
+    }
+
+    .slider-pagination {
+        margin-bottom: 1.25rem;
+    }
 }
 
 /* Adjust the checked styles to use translateX for animation */
@@ -154,7 +178,7 @@ span {
 #slide4:checked~.slider__bottom>.slider-pagination label[for="slide4"],
 #slide5:checked~.slider__bottom>.slider-pagination label[for="slide5"] {
     background-color: transparent;
-    border: 3px solid var(--pagination-button-color);
+    border: 0.188rem solid var(--pagination-button-color);
 }
 
 #slide1:checked~.slider__bottom>.slider-pagination label[for="slide1"]:hover,
@@ -162,7 +186,7 @@ span {
 #slide3:checked~.slider__bottom>.slider-pagination label[for="slide3"]:hover,
 #slide4:checked~.slider__bottom>.slider-pagination label[for="slide4"]:hover,
 #slide5:checked~.slider__bottom>.slider-pagination label[for="slide5"]:hover {
-    border: 3px solid var(--pagination-button-hover-color);
+    border: 0.188rem solid var(--pagination-button-hover-color);
 }
 
 /* Adjust the checked styles to use translateX for animation */
