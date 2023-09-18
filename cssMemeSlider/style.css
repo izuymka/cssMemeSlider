@@ -43,7 +43,7 @@ body {
     max-width: 36.875rem;
     max-height: 36.875rem;
     overflow: hidden;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .slider__item {
@@ -198,27 +198,22 @@ body {
 /* Adjust the checked styles to use translateX for animation */
 #slide1:checked~.slider__screen>.slide1 {
     transform: translateX(0);
-    z-index: 1;
 }
 
 #slide2:checked~.slider__screen>.slide2 {
     transform: translateX(-100%);
-    z-index: 1;
 }
 
 #slide3:checked~.slider__screen>.slide3 {
     transform: translateX(-200%);
-    z-index: 1;
 }
 
 #slide4:checked~.slider__screen>.slide4 {
     transform: translateX(-300%);
-    z-index: 1;
 }
 
 #slide5:checked~.slider__screen>.slide5 {
     transform: translateX(-400%);
-    z-index: 1;
 }
 
 /* Стили для активной точки пагинации */
