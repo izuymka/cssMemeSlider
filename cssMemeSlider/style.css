@@ -142,17 +142,17 @@ body {
 }
 
 #slide3:checked~.slider__bottom>.slider__text>.slider--text3 {
-    transform: translateX(-175%);
+    transform: translateX(-192%);
     opacity: 1;
 }
 
 #slide4:checked~.slider__bottom>.slider__text>.slider--text4 {
-    transform: translateX(-655%);
+    transform: translateX(-680%);
     opacity: 1;
 }
 
 #slide5:checked~.slider__bottom>.slider__text>.slider--text5 {
-    transform: translateX(-500%);
+    transform: translateX(-540%);
     opacity: 1;
 }
 
