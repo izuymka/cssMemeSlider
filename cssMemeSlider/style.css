@@ -5,6 +5,7 @@
     --slider-color: #262626;
     --slider-text: #FFF;
     --pagination-button-color: #FFA42E;
+    --pagination-button-active-color: #e38a14;
     --pagination-button-hover-color: #BBBBBB;
 }
 
@@ -110,6 +111,11 @@ body {
 
 .slider-pagination label:hover {
     background-color: var(--pagination-button-hover-color);
+    transition: background-color 0.5s;
+}
+
+.slider-pagination label:active {
+    background-color: var(--pagination-button-active-color);
     transition: background-color 0.5s;
 }
 
@@ -228,13 +234,13 @@ body {
 #slide4:checked~.slider__bottom>.slider-pagination label[for="slide4"],
 #slide5:checked~.slider__bottom>.slider-pagination label[for="slide5"] {
     background-color: transparent;
-    border: 0.188rem solid var(--pagination-button-color);
+    border: 0.188rem solid var(--pagination-button-active-color);
 }
 
-#slide1:checked~.slider__bottom>.slider-pagination label[for="slide1"]:hover,
-#slide2:checked~.slider__bottom>.slider-pagination label[for="slide2"]:hover,
-#slide3:checked~.slider__bottom>.slider-pagination label[for="slide3"]:hover,
-#slide4:checked~.slider__bottom>.slider-pagination label[for="slide4"]:hover,
-#slide5:checked~.slider__bottom>.slider-pagination label[for="slide5"]:hover {
-    border: 0.188rem solid var(--pagination-button-hover-color);
+#slide1:checked~.slider__bottom>.slider-pagination label[for="slide1"]:active,
+#slide2:checked~.slider__bottom>.slider-pagination label[for="slide2"]:active,
+#slide3:checked~.slider__bottom>.slider-pagination label[for="slide3"]:active,
+#slide4:checked~.slider__bottom>.slider-pagination label[for="slide4"]:active,
+#slide5:checked~.slider__bottom>.slider-pagination label[for="slide5"]:active {
+    border: 0.188rem solid var(--pagination-button-active-color);
 }
