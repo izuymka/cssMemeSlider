@@ -175,6 +175,10 @@ body {
         width: 100%;
     }
 
+    .slider__item img {
+        height: 100%;
+    }
+
     .slider__img {
         width: auto;
         height: auto;
@@ -187,6 +191,7 @@ body {
     }
 
     .slider-pagination {
+        margin-top: 1rem;
         margin-bottom: 1.25rem;
     }
 
